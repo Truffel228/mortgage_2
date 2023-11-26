@@ -1,10 +1,8 @@
 import 'package:mortgage/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:go_router/go_router.dart';
 import 'package:in_app_review/in_app_review.dart';
-import 'package:mortgage/screens/settings/param_item.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:mortgage/screens/parameters/param_item.dart';
 
 class ParametersScreen extends StatelessWidget {
   const ParametersScreen({super.key});
@@ -65,16 +63,5 @@ class ParametersScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-Future<void> rate(SharedPreferences shPre) async {
-  final rev = InAppReview.instance;
-  bool alreadyRated = shPre.getBool('rate') ?? false;
-  if (!alreadyRated) {
-    if (await rev.isAvailable()) {
-      rev.requestReview();
-      await shPre.setBool('rate', true);
-    }
   }
 }

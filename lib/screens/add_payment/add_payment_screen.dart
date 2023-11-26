@@ -35,10 +35,6 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
                   const Text(
                     'LOAN INFO',
                   ),
-                  InkWell(
-                    onTap: () => context.push(AppRouter.parameters),
-                    child: SvgPicture.asset('assets/gear.svg'),
-                  ),
                 ],
               ),
             ),

@@ -48,11 +48,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC6eGC_8gdvlSru2QCo_KKMnWk9EbfR7xI',
-    appId: '1:490821755961:ios:9932af47280061082cd9e8',
-    messagingSenderId: '490821755961',
-    projectId: 'loans-cf027',
-    storageBucket: 'loans-cf027.appspot.com',
-    iosBundleId: 'com.invest.calculator.reality',
+    apiKey: 'AIzaSyC4hTUNtaFryVcsjeTpQ1Mq7hN4lvuZ3jA',
+    appId: '1:77520101010:ios:edfa83c62826b154de104b',
+    messagingSenderId: '77520101010',
+    projectId: 'mortgage-939c4',
+    storageBucket: 'mortgage-939c4.appspot.com',
+    iosBundleId: 'com.dioxaq.invest.calc',
   );
 }

@@ -1,4 +1,4 @@
-package com.example.mortgage
+package com.dioxaq.invest.calc
 
 import io.flutter.embedding.android.FlutterActivity
 

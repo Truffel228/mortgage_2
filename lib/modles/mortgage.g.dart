@@ -6,7 +6,7 @@ part of 'mortgage.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Mortgage _$LoanFromJson(Map<String, dynamic> json) => Mortgage(
+Mortgage _$MortgageFromJson(Map<String, dynamic> json) => Mortgage(
       title: json['title'] as String,
       amount: json['amount'] as int,
       rate: json['rate'] as int,
@@ -17,7 +17,7 @@ Mortgage _$LoanFromJson(Map<String, dynamic> json) => Mortgage(
           (json['payments'] as List<dynamic>).map((e) => e as int).toList(),
     );
 
-Map<String, dynamic> _$LoanToJson(Mortgage instance) => <String, dynamic>{
+Map<String, dynamic> _$MortgageToJson(Mortgage instance) => <String, dynamic>{
       'title': instance.title,
       'amount': instance.amount,
       'rate': instance.rate,

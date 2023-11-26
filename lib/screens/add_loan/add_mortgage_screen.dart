@@ -1,10 +1,8 @@
-import 'package:mortgage/app_router.dart';
 import 'package:mortgage/app_theme.dart';
 import 'package:mortgage/modles/mortgage.dart';
 import 'package:mortgage/screens/add_loan/widgets/payment_type_picker.dart';
-import 'package:mortgage/widgets/app_text_field.dart';
+import 'package:mortgage/widgets/custom_text_field.dart';
 import 'package:mortgage/widgets/app_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -67,12 +65,12 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const SizedBox(height: 16),
-                      AppTextField(
+                      CustomTextField(
                         hintText: 'Title',
                         controller: _titleController,
                       ),
                       const SizedBox(height: 16),
-                      AppTextField(
+                      CustomTextField(
                         keyboardType: TextInputType.number,
                         hintText: 'Amount',
                         controller: _amountController,
@@ -92,7 +90,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                         },
                       ),
                       const SizedBox(height: 16),
-                      AppTextField(
+                      CustomTextField(
                         keyboardType: TextInputType.number,
                         hintText: 'Rate',
                         formatters: [
@@ -115,7 +113,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                         },
                       ),
                       const SizedBox(height: 16),
-                      AppTextField(
+                      CustomTextField(
                         keyboardType: TextInputType.number,
                         hintText: 'Term',
                         formatters: [
@@ -152,7 +150,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                           _firstPaymentDateController.text =
                               DateFormat('dd.MM.yyyy').format(result);
                         },
-                        child: AppTextField(
+                        child: CustomTextField(
                           enabled: false,
                           hintText: 'First payment date',
                           controller: _firstPaymentDateController,

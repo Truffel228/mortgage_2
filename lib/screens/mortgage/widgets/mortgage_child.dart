@@ -1,11 +1,7 @@
 import 'package:mortgage/app_router.dart';
-import 'package:mortgage/app_theme.dart';
 import 'package:mortgage/modles/mortgage.dart';
-import 'package:mortgage/screens/mortgage/widgets/mortgage_property.dart';
-import 'package:mortgage/screens/mortgage_detailed_screen/widgets/pay_progress.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intl/intl.dart';
 
 class MortgageChild extends StatelessWidget {
   const MortgageChild({

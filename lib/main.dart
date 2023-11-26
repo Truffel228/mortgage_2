@@ -1,11 +1,9 @@
-import 'dart:async';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:mortgage/app_router.dart';
 import 'package:mortgage/app_theme.dart';
-import 'package:mortgage/config.dart';
-import 'package:mortgage/modles/loans_change_notifier.dart';
+import 'package:mortgage/configuration.dart';
+import 'package:mortgage/modles/mortgages_change_notifier.dart';
 import 'package:mortgage/notifx.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -50,7 +48,8 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => LoansChangeNotifier(widget.shPref)..init(),
+          create: (context) => MortgagesChangeNotifier(widget.shPref)
+            ..initMortgagesChangeNotifier(),
         ),
         Provider.value(value: widget.shPref),
       ],

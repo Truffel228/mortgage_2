@@ -1,7 +1,7 @@
 import 'package:mortgage/app_router.dart';
 import 'package:mortgage/app_theme.dart';
 import 'package:mortgage/modles/mortgage.dart';
-import 'package:mortgage/modles/loans_change_notifier.dart';
+import 'package:mortgage/modles/mortgages_change_notifier.dart';
 import 'package:mortgage/screens/mortgage/widgets/mortgage_child.dart';
 import 'package:mortgage/widgets/app_button.dart';
 import 'package:flutter/material.dart';
@@ -17,12 +17,12 @@ class MortgageScreen extends StatefulWidget {
 }
 
 class _MortgageScreenState extends State<MortgageScreen> {
-  late final LoansChangeNotifier _loansChangeNotifier;
+  late final MortgagesChangeNotifier _loansChangeNotifier;
 
   @override
   void initState() {
     super.initState();
-    _loansChangeNotifier = context.read<LoansChangeNotifier>();
+    _loansChangeNotifier = context.read<MortgagesChangeNotifier>();
   }
 
   @override
@@ -49,9 +49,7 @@ class _MortgageScreenState extends State<MortgageScreen> {
                           ),
                         ),
                       ),
-                      InkWell(
-                          onTap: () => context.push(AppRouter.parameters),
-                          child: SvgPicture.asset('assets/gear.svg')),
+                      
                     ],
                   ),
                 ),
@@ -137,6 +135,6 @@ class _MortgageScreenState extends State<MortgageScreen> {
   void _onAddLoanTap(BuildContext context) async {
     final result = await context.push<Mortgage?>(AppRouter.addMortgage);
     if (result == null) return;
-    _loansChangeNotifier.addLoan(result);
+    _loansChangeNotifier.addMortgage(result);
   }
 }

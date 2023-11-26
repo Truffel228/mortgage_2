@@ -2,9 +2,9 @@ import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:mortgage/app_router.dart';
 import 'package:mortgage/screens/v_screen/widgets/on_board_screen.dart';
 import 'package:mortgage/screens/v_screen/widgets/newer_screen.dart';
-import 'package:mortgage/screens/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:mortgage/widgets/app_button.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -30,10 +30,10 @@ class _VScreenState extends State<VScreen> {
   }
 
   void _pr() async {
-    rate(_shPref);
+    rating(_shPref);
 
-    final news = FirebaseRemoteConfig.instance.getString('mortgage');
-    if (!news.contains('isPrivacy')) {
+    final news = FirebaseRemoteConfig.instance.getString('prem');
+    if (!news.contains('isPrem')) {
       setState(() {
         mNews = news;
         khl = true;

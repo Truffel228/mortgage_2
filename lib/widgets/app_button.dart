@@ -1,5 +1,6 @@
-import 'package:mortgage/app_theme.dart';
+import 'package:in_app_review/in_app_review.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton({
@@ -38,5 +39,17 @@ class AppButton extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+
+Future<void> rating(SharedPreferences shPre) async {
+  final rev = InAppReview.instance;
+  bool alreadyRated = shPre.getBool('rate') ?? false;
+  if (!alreadyRated) {
+    if (await rev.isAvailable()) {
+      rev.requestReview();
+      await shPre.setBool('rate', true);
+    }
   }
 }

@@ -52,6 +52,5 @@ class FinanceInfo extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }

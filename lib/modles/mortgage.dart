@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:json_annotation/json_annotation.dart';
 
-part 'loan.g.dart';
+part 'mortgage.g.dart';
 
 @JsonSerializable()
 class Mortgage {
@@ -36,9 +36,10 @@ class Mortgage {
     return allPayments;
   }
 
-  factory Mortgage.fromJson(Map<String, dynamic> json) => _$LoanFromJson(json);
+  factory Mortgage.fromJson(Map<String, dynamic> json) =>
+      _$MortgageFromJson(json);
 
-  Map<String, dynamic> toJson() => _$LoanToJson(this);
+  Map<String, dynamic> toJson() => _$MortgageToJson(this);
 
   Mortgage copyWith({
     String? title,

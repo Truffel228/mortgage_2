@@ -1,8 +1,6 @@
 import 'package:mortgage/app_router.dart';
-import 'package:mortgage/app_theme.dart';
 import 'package:mortgage/modles/mortgage.dart';
-import 'package:mortgage/modles/loans_change_notifier.dart';
-import 'package:mortgage/screens/mortgage_detailed_screen/widgets/loan_option.dart';
+import 'package:mortgage/modles/mortgages_change_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -18,13 +16,13 @@ class MortgageDetailedScreen extends StatefulWidget {
 }
 
 class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
-  late final LoansChangeNotifier _loansChangeNotifier;
+  late final MortgagesChangeNotifier _loansChangeNotifier;
   late Mortgage _edittedLoan;
 
   @override
   void initState() {
     super.initState();
-    _loansChangeNotifier = context.read<LoansChangeNotifier>();
+    _loansChangeNotifier = context.read<MortgagesChangeNotifier>();
     _edittedLoan = widget.loan;
   }
 
@@ -287,7 +285,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                         }
 
                         _edittedLoan.payments.add(result);
-                        _loansChangeNotifier.editLoan(
+                        _loansChangeNotifier.editMortgage(
                           widget.loan,
                           _edittedLoan,
                         );
@@ -372,7 +370,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
               const SizedBox(height: 8),
               GestureDetector(
                 onTap: () {
-                  _loansChangeNotifier.deleteLoan(widget.loan);
+                  _loansChangeNotifier.deleteMortgage(widget.loan);
                   context.pop();
                 },
                 child: Container(

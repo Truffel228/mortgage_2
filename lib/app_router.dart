@@ -8,8 +8,8 @@ import 'package:mortgage/screens/v_screen/v_screen.dart';
 import 'package:mortgage/screens/mortgage/mortgage_screen.dart';
 import 'package:mortgage/screens/main_builder/main_builder.dart';
 import 'package:mortgage/screens/mortgage_detailed_screen/mortgage_detailed_screen.dart';
-import 'package:mortgage/screens/settings/lru_screen.dart';
-import 'package:mortgage/screens/settings/settings_screen.dart';
+import 'package:mortgage/screens/parameters/lru_screen.dart';
+import 'package:mortgage/screens/parameters/parameters_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final GlobalKey<NavigatorState> _parentKey = GlobalKey<NavigatorState>();
