@@ -5,7 +5,6 @@ import 'package:mortgage/modles/mortgages_change_notifier.dart';
 import 'package:mortgage/screens/mortgage/widgets/mortgage_child.dart';
 import 'package:mortgage/widgets/app_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
@@ -34,14 +33,14 @@ class _MortgageScreenState extends State<MortgageScreen> {
             return CustomScrollView(
               physics: const ClampingScrollPhysics(),
               slivers: [
-                SliverAppBar(
+                const SliverAppBar(
                   pinned: true,
                   elevation: 0,
                   title: Row(
                     children: [
-                      const Expanded(
+                      Expanded(
                         child: Text(
-                          'Your Mortgages',
+                          'Tus hipotecas',
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 18,
@@ -49,7 +48,6 @@ class _MortgageScreenState extends State<MortgageScreen> {
                           ),
                         ),
                       ),
-                      
                     ],
                   ),
                 ),
@@ -66,7 +64,7 @@ class _MortgageScreenState extends State<MortgageScreen> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    "It's Empty",
+                                    "Esta vacio",
                                     style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: AppTheme.blackColor,
@@ -75,7 +73,7 @@ class _MortgageScreenState extends State<MortgageScreen> {
                                   ),
                                   SizedBox(height: 16),
                                   Text(
-                                    'Add information about your mortgage by clicking the "Add Loan" button',
+                                    'Agregue información sobre su hipoteca haciendo clic en el botón "Agregar préstamo"',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w400,
@@ -92,7 +90,7 @@ class _MortgageScreenState extends State<MortgageScreen> {
                                       MediaQuery.of(context).size.width * 0.5,
                                   height: 50,
                                   onTap: () => _onAddLoanTap(context),
-                                  text: 'ADD LOAN',
+                                  text: 'AÑADIR HIPOTECA',
                                 ),
                               ),
                             ],
@@ -116,7 +114,7 @@ class _MortgageScreenState extends State<MortgageScreen> {
                                       MediaQuery.of(context).size.width * 0.5,
                                   height: 50,
                                   onTap: () => _onAddLoanTap(context),
-                                  text: 'ADD LOAN',
+                                  text: 'AÑADIR HIPOTECA',
                                 ),
                               );
                             }

@@ -1,4 +1,3 @@
-import 'package:mortgage/app_router.dart';
 import 'package:mortgage/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -33,8 +32,9 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
                     child: SvgPicture.asset('icons/back.svg'),
                   ),
                   const Text(
-                    'LOAN INFO',
+                    'INFORMACIÓN DEL PRÉSTAMO',
                   ),
+                  const SizedBox(),
                 ],
               ),
             ),
@@ -89,7 +89,7 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
 
           context.pop(amount);
         },
-        text: 'ADD PAYMENT',
+        text: 'AÑADIR PAGO',
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );

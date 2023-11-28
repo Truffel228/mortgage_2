@@ -19,7 +19,7 @@ class FinanceInfo extends StatelessWidget {
           ),
         ),
         elevation: 0,
-        title: const Text('Financial Info'),
+        title: const Text('Información financiera'),
       ),
       body: Stack(
         children: [

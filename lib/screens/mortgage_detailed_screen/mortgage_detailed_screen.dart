@@ -44,7 +44,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                     child: SvgPicture.asset('icons/back.svg'),
                   ),
                   const Text(
-                    'Loan Info',
+                    'Información hipotecaria',
                   ),
                   InkWell(
                     onTap: () => context.push(AppRouter.parameters),
@@ -95,14 +95,14 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Paid',
+                              'Pagada',
                               style: TextStyle(
                                 fontSize: 11,
                                 color: Color(0xFFC1C1C1),
                               ),
                             ),
                             Text(
-                              'Debt',
+                              'Deuda',
                               style: TextStyle(
                                 fontSize: 11,
                                 color: Color(0xFFC1C1C1),
@@ -120,7 +120,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                       children: [
                         const Expanded(
                           child: Text(
-                            'Current payment',
+                            'Pago actual',
                             style: TextStyle(
                               fontSize: 13,
                               color: Color(0xFF363636),
@@ -144,7 +144,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Paid interest',
+                            'Intereses pagados',
                             style: TextStyle(
                               fontSize: 13,
                               color: Color(0xFF363636),
@@ -168,7 +168,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Remaining interest',
+                            'Interés restante',
                             style: TextStyle(
                               fontSize: 13,
                               color: Color(0xFF363636),
@@ -192,7 +192,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Total interest',
+                            'Interés total',
                             style: TextStyle(
                               fontSize: 13,
                               color: Color(0xFF363636),
@@ -217,7 +217,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Total fee',
+                            'Costo total',
                             style: TextStyle(
                               fontSize: 13,
                               color: Color(0xFF363636),
@@ -242,7 +242,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Total insurance',
+                            'Seguro total',
                             style: TextStyle(
                               fontSize: 13,
                               color: Color(0xFF363636),
@@ -289,7 +289,9 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                           widget.loan,
                           _edittedLoan,
                         );
-
+                        if (!context.mounted) {
+                          return;
+                        }
                         context.pop();
                       },
                       child: Container(
@@ -306,7 +308,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                         ),
                         child: const FittedBox(
                           child: Text(
-                            'Add Payment',
+                            'Agregar pago',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
@@ -332,7 +334,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                       ),
                       child: FittedBox(
                         child: Text(
-                          'Schedule',
+                          'Cronograma',
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w700,
@@ -356,7 +358,7 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                             Border.all(color: Theme.of(context).primaryColor),
                       ),
                       child: Text(
-                        'Details',
+                        'Detalles',
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
@@ -376,12 +378,12 @@ class _MortgageDetailedScreenState extends State<MortgageDetailedScreen> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Color(0xFFfdf2f2),
+                    color: const Color(0xFFfdf2f2),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   alignment: Alignment.center,
-                  child: Text(
-                    'Delete Loan',
+                  child: const Text(
+                    'Eliminar préstamo',
                     style: TextStyle(
                       color: Color(0xFFFF0000),
                       fontWeight: FontWeight.w700,

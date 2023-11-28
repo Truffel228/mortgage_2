@@ -47,7 +47,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                       child: SvgPicture.asset('icons/back.svg'),
                     ),
                     const Text(
-                      'ADD LOAN',
+                      'AÑADIR HIPOTECA',
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         color: AppTheme.blackColor,
@@ -66,13 +66,13 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                     children: [
                       const SizedBox(height: 16),
                       CustomTextField(
-                        hintText: 'Title',
+                        hintText: 'Título',
                         controller: _titleController,
                       ),
                       const SizedBox(height: 16),
                       CustomTextField(
                         keyboardType: TextInputType.number,
-                        hintText: 'Amount',
+                        hintText: 'Cantidad',
                         controller: _amountController,
                         formatters: [
                           FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
@@ -92,7 +92,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                       const SizedBox(height: 16),
                       CustomTextField(
                         keyboardType: TextInputType.number,
-                        hintText: 'Rate',
+                        hintText: 'Tasa',
                         formatters: [
                           FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
                         ],
@@ -115,7 +115,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                       const SizedBox(height: 16),
                       CustomTextField(
                         keyboardType: TextInputType.number,
-                        hintText: 'Term',
+                        hintText: 'Término',
                         formatters: [
                           FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
                         ],
@@ -152,7 +152,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                         },
                         child: CustomTextField(
                           enabled: false,
-                          hintText: 'First payment date',
+                          hintText: 'Primera fecha de pago',
                           controller: _firstPaymentDateController,
                         ),
                       ),
@@ -169,7 +169,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
                     children: [
                       const SizedBox(height: 28),
                       const Text(
-                        'Payment type',
+                        'Tipo de pago',
                         style: TextStyle(
                           fontSize: 12,
                           color: Color(0xFFC1C1C1),
@@ -195,7 +195,7 @@ class _AddMortgageScreenState extends State<AddMortgageScreen> {
           height: 50,
           width: MediaQuery.of(context).size.width * 0.5,
           onTap: () => _onAddLoanTap(context),
-          text: 'ADD LOAN',
+          text: 'AÑADIR HIPOTECA',
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),

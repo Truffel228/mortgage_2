@@ -20,7 +20,7 @@ class FinancialScreen extends StatelessWidget {
                 top: 16,
               ),
               child: Text(
-                'Financial',
+                'Financiera',
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 18,

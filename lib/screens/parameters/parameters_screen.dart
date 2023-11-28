@@ -20,7 +20,7 @@ class ParametersScreen extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 16),
                 child: Text(
-                  'Settings',
+                  'Ajustes',
                   style: TextStyle(
                     color: Color(0xFF363636),
                     fontWeight: FontWeight.w700,
@@ -30,7 +30,7 @@ class ParametersScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               ParamItem(
-                title: 'Privacy Policy',
+                title: 'Política de privacidad',
                 onTap: () => context.push(
                   AppRouter.ppu,
                   extra:
@@ -38,7 +38,7 @@ class ParametersScreen extends StatelessWidget {
                 ),
               ),
               ParamItem(
-                title: 'Terms and Condition',
+                title: 'Términos y Condiciones',
                 onTap: () => context.push(
                   AppRouter.ppu,
                   extra:
@@ -46,14 +46,14 @@ class ParametersScreen extends StatelessWidget {
                 ),
               ),
               ParamItem(
-                title: 'Write Support',
+                title: 'Soporte de escritura',
                 onTap: () => context.push(
                   AppRouter.ppu,
                   extra: 'https://forms.gle/GQKLramC4sTWUxxi8',
                 ),
               ),
               ParamItem(
-                title: 'Rate our app in the AppStore',
+                title: 'Califica nuestra aplicación en la AppStore',
                 onTap: () => InAppReview.instance.openStoreListing(
                   appStoreId: '6471505545',
                 ),
